@@ -1,8 +1,8 @@
 provider "google" {
     credentials = file("mygcp-creds.json")
-    project = "terrafrom-371015" 
+    project = var.project
     region = var.region
-    #zone = var.zone
+    zone = var.zone
 }
 
 resource "google_compute_instance" "database" {
